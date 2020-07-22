@@ -3,8 +3,13 @@ class Todo {
     this.container = document.querySelector(container);
     this.todos = [];
     this.renderStatic();
+    this.fetchLocalStorage();
   }
 
+  fetchLocalStorage() {
+    this.todos = JSON.parse(window.localStorage.getItem("todos"));
+    this.render();
+  }
   renderStatic() {
     const template = `<header class="header">
     <label for="input">Type your todo here: </label>
@@ -44,7 +49,7 @@ class Todo {
     this.initDeleteButton();
     this.initEditButton();
     this.initCheckButton();
-    console.log(this.todos);
+    window.localStorage.setItem("todos", JSON.stringify(this.todos));
   }
 
   create(value) {

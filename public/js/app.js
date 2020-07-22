@@ -7,8 +7,10 @@ class Todo {
   }
 
   fetchLocalStorage() {
-    this.todos = JSON.parse(window.localStorage.getItem("todos"));
-    this.render();
+    if (window.localStorage.getItem("todos") !== null) {
+      this.todos = JSON.parse(window.localStorage.getItem("todos"));
+      this.render();
+    }
   }
   renderStatic() {
     const template = `<header class="header">

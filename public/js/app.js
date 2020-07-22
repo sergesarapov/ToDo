@@ -92,6 +92,7 @@ class Todo {
     const createButton = document.querySelector(".header__button");
     createButton.addEventListener("click", () => {
       this.create(input.value);
+      input.value = "";
     });
   }
   initDeleteButton() {

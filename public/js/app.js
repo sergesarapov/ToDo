@@ -14,6 +14,7 @@ class Todo {
   }
   renderStatic() {
     const template = `<header class="header">
+    <form>
     <label for="input">Type your todo here: </label>
         <input
           class="header__input"
@@ -21,7 +22,8 @@ class Todo {
           type="text"
           placeholder="Brush your teeth with my dick"
         ></input>
-        <button class="header__button">Create</button>
+        <button type="submit" class="header__button">Create</button>
+        </form>
       </header>
       <section class="todos-container"></section>`;
     this.container.insertAdjacentHTML("beforeend", template);

@@ -92,7 +92,8 @@ class Todo {
   initCreateButton() {
     const input = document.querySelector(".header__input");
     const createButton = document.querySelector(".header__button");
-    createButton.addEventListener("click", () => {
+    createButton.addEventListener("click", (e) => {
+      e.preventDefault();
       this.create(input.value);
       input.value = "";
     });

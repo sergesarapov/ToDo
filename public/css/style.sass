@@ -1,0 +1,84 @@
+*
+    margin: 0
+    padding: 0
+
+.container
+    display: flex
+    width: 800px
+    height: 100vh
+    margin: auto
+    flex-direction: column
+    padding-top: 50px
+
+.header
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 40px
+    width: 60%
+    margin-bottom: 16px
+    &__input
+        width: 260px
+        min-height: 25px
+    &__button
+        height: 32px
+        background-color: #9de76b
+        border: none
+        border-radius: 3px
+        padding: 10px
+
+.todos-container
+    display: flex
+    flex-direction: column
+    width: 100%
+.todo
+    margin: auto
+    display: flex
+    margin-bottom: 8px
+    // justify-content: space-around
+    align-items: center
+    width: 60%
+    min-height: 50px
+    border: 1px solid grey
+    border-radius: 3px
+    &__radio
+        margin-right: 20px
+        height: 30px
+        width: 30px
+        margin-left: 15px
+    &__text
+        margin-right: 25px
+        display: flex
+    &__delete-button
+        margin-left: 40px
+        margin-right: 10px
+        height: 32px
+        background-color: #e7796b
+        border: none
+        border-radius: 3px
+        padding: 10px
+    &__edit-button
+        margin-left: 20px
+        height: 32px
+        background-color: #e7d46b
+        border: none
+        border-radius: 3px
+        padding: 10px
+    &__edit-button_pushed
+        margin-left: 115px
+        height: 32px
+        background-color: #e7d46b
+        border: none
+        border-radius: 3px
+        padding: 10px
+    &_done
+        background-color: #6bcee7
+        font-style: italic
+
+.text_lined
+    text-decoration: line-through
+
+.wrap
+    display: flex
+    width: 250px

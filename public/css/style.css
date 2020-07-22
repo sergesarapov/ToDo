@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 800px;
+  height: 100vh;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 50px;
+}
+
+.header {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+  width: 60%;
+  margin-bottom: 16px;
+}
+
+.header__input {
+  width: 260px;
+  min-height: 25px;
+}
+
+.header__button {
+  height: 32px;
+  background-color: #9de76b;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.todos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.todo {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
+  min-height: 50px;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.todo__radio {
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+  margin-left: 15px;
+}
+
+.todo__text {
+  margin-right: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.todo__delete-button {
+  margin-left: 40px;
+  margin-right: 10px;
+  height: 32px;
+  background-color: #e7796b;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.todo__edit-button {
+  margin-left: 20px;
+  height: 32px;
+  background-color: #e7d46b;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.todo__edit-button_pushed {
+  margin-left: 115px;
+  height: 32px;
+  background-color: #e7d46b;
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.todo_done {
+  background-color: #6bcee7;
+  font-style: italic;
+}
+
+.text_lined {
+  text-decoration: line-through;
+}
+
+.wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+}

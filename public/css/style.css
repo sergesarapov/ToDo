@@ -1,6 +1,9 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
 }
 
 .container {
@@ -36,6 +39,8 @@
 .header__input {
   width: 260px;
   min-height: 25px;
+  padding: 0 5px;
+  margin-right: 12px;
 }
 
 .header__button {
@@ -73,8 +78,45 @@
 }
 
 .todo__radio {
+  display: none;
+}
+
+.todo__radio + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-right: 20px;
   margin-left: 15px;
+  background-color: darkgrey;
+  border-radius: 3px;
+}
+
+.todo__radio + label::before {
+  content: '';
+  height: 20px;
+  width: 20px;
+}
+
+.todo__radio:checked + label {
+  background-color: #fff;
+}
+
+.todo__radio:checked + label::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  content: '';
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  font-family: "FontAwesome";
+  font-size: 20px;
 }
 
 .todo__text {
@@ -104,7 +146,7 @@
 }
 
 .todo__edit-button_pushed {
-  margin-left: 115px;
+  margin-left: 122px;
   height: 32px;
   background-color: #e7d46b;
   border: none;
@@ -126,11 +168,12 @@
   display: -ms-flexbox;
   display: flex;
   width: 250px;
-  margin-right: 56px;
+  margin-right: 72px;
 }
 
 .edit {
   height: 30px;
+  padding: 0 5px;
 }
 
 @media screen and (max-width: 600px) {
@@ -150,11 +193,11 @@
     margin-left: 10px;
   }
   .todo__edit-button_pushed {
-    margin-left: 10px;
+    margin-left: 18px;
   }
   .wrap {
     width: 200px;
-    margin-right: 0;
+    margin-right: 14px;
   }
   .edit {
     width: 120px;

@@ -37,14 +37,15 @@ class Todo {
       const template = `<div class="todo ${
         todo.check === false ? "" : "todo_done"
       }" data-id=${todo.id} >
-          <input class="todo__radio" type="checkbox" ${
+          <input id="checkbox" class="todo__radio" type="checkbox" ${
             todo.check === false ? "" : "checked"
           }/>
-         <div class="wrap">
-          <p class="todo__text ${todo.check === false ? "" : "text_lined"}">
-            ${todo.value}
-          </p>
-         </div>
+          <label class="label" for="checkbox"></label>
+          <div class="wrap">
+              <p class="todo__text ${todo.check === false ? "" : "text_lined"}">
+                ${todo.value}
+              </p>
+          </div>
           <button class="todo__edit-button">Edit</button>
           <button class="todo__delete-button">Delete</button>
         </div>`;
@@ -121,7 +122,7 @@ class Todo {
           .querySelector(".todo__text")
           .textContent.trim();
 
-        button.parentNode.querySelector(".todo__text").innerHTML = `
+        button.parentNode.querySelector(".wrap").innerHTML = `
         <input class="edit" type="text" value="${textVal}" />
         <button class="todo__edit-button_pushed">Confirm</button>`;
         const curId = +button.parentNode.dataset.id;
@@ -137,9 +138,9 @@ class Todo {
     });
   }
   initCheckButton() {
-    const checkboxes = this.container.querySelectorAll(".todo__radio");
+    const checkboxes = this.container.querySelectorAll(".label");
     checkboxes.forEach((box) => {
-      box.addEventListener("change", (e) => {
+      box.addEventListener("click", (e) => {
         this.check(+box.parentNode.dataset.id);
       });
     });

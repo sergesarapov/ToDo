@@ -1,6 +1,8 @@
 *
     margin: 0
     padding: 0
+    font-family: 'Roboto', sans-serif
+    font-size: 12px
 
 .container
     display: flex
@@ -21,6 +23,8 @@
     &__input
         width: 260px
         min-height: 25px
+        padding: 0 5px
+        margin-right: 12px
     &__button
         height: 32px
         background-color: #9de76b
@@ -42,10 +46,29 @@
     border: 1px solid grey
     border-radius: 3px
     &__radio
+        display: none
+    &__radio + label
+        display: flex
         margin-right: 20px
-        // height: 40px
-        // width: 40px
         margin-left: 15px
+        background-color: darkgrey
+        border-radius: 3px
+    &__radio + label::before
+        content: ''
+        height: 20px
+        width: 20px
+    &__radio:checked + label
+        background-color: #fff
+    &__radio:checked + label::before
+        display: flex
+        justify-content: center
+        align-items: center
+        content: ''
+        text-align: center
+        height: 20px
+        width: 20px
+        font-family: "FontAwesome"
+        font-size: 20px
     &__text
         margin-right: 25px
         display: flex
@@ -65,7 +88,7 @@
         border-radius: 3px
         padding: 10px
     &__edit-button_pushed
-        margin-left: 115px
+        margin-left: 122px
         height: 32px
         background-color: #e7d46b
         border: none
@@ -81,9 +104,10 @@
 .wrap
     display: flex
     width: 250px
-    margin-right: 56px
+    margin-right: 72px
 .edit
     height: 30px
+    padding: 0 5px
 @media screen and (max-width: 600px)
     .container
         max-width: 380px
@@ -96,9 +120,9 @@
         &__delete-button
             margin-left: 10px
         &__edit-button_pushed
-            margin-left: 10px
+            margin-left: 18px
     .wrap
         width: 200px
-        margin-right: 0
+        margin-right: 14px
     .edit
         width: 120px

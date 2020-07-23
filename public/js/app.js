@@ -49,7 +49,7 @@ class Todo {
           <button class="todo__edit-button">Edit</button>
           <button class="todo__delete-button">Delete</button>
         </div>`;
-      container.insertAdjacentHTML("beforeend", template);
+      container.insertAdjacentHTML("afterbegin", template);
     });
     this.initDeleteButton();
     this.initEditButton();

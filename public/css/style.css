@@ -49,6 +49,7 @@
   border: none;
   border-radius: 3px;
   padding: 10px;
+  margin-left: 18px;
 }
 
 .todos-container {
@@ -182,9 +183,14 @@
   }
   .header {
     width: 95%;
+    padding-left: 16px;
   }
   .header__input {
     width: 150px;
+    margin-right: 2px;
+  }
+  .header__button {
+    margin-left: 1px;
   }
   .todo {
     width: 90%;

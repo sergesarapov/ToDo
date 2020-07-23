@@ -128,4 +128,37 @@
   display: -ms-flexbox;
   display: flex;
   width: 250px;
+  margin-right: 56px;
+}
+
+.edit {
+  height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .header {
+    width: 95%;
+  }
+  .header__input {
+    width: 150px;
+  }
+  .todo {
+    width: 90%;
+  }
+  .todo__delete-button {
+    margin-left: 10px;
+  }
+  .todo__edit-button_pushed {
+    margin-left: 10px;
+  }
+  .wrap {
+    width: 200px;
+    margin-right: 0;
+  }
+  .edit {
+    width: 120px;
+  }
 }

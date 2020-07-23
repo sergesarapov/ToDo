@@ -128,7 +128,7 @@ class Todo {
         const butt = button.parentNode.querySelector(
           ".todo__edit-button_pushed"
         );
-        button.style = "visibility: hidden;";
+        button.style = "display:none;";
         butt.addEventListener("click", (e) => {
           const input = button.parentNode.querySelector(".edit").value;
           this.edit(curId, input);

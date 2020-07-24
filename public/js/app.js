@@ -20,7 +20,7 @@ class Todo {
           class="header__input"
           id="input"
           type="text"
-          placeholder="Brush your teeth with my dick"
+          placeholder="Buy skunk essence 🦨"
         ></input>
         <button type="submit" class="header__button">Create</button>
         </form>

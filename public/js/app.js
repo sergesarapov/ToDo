@@ -52,7 +52,7 @@ class Todo {
       container.insertAdjacentHTML("afterbegin", template);
     });
     this.initDeleteButton();
-    this.initEditButton();
+    this.toggleEditConfirm();
     this.initCheckButton();
     window.localStorage.setItem("todos", JSON.stringify(this.todos));
   }
@@ -114,28 +114,31 @@ class Todo {
       });
     });
   }
-  initEditButton() {
+  toggleEditConfirm() {
     const editButtons = this.container.querySelectorAll(".todo__edit-button");
     editButtons.forEach((button) => {
       button.addEventListener("click", (e) => {
-        const textVal = button.parentNode
-          .querySelector(".todo__text")
-          .textContent.trim();
-
-        button.parentNode.querySelector(".wrap").innerHTML = `
-        <input class="edit" type="text" value="${textVal}" />
-        <button class="todo__edit-button_pushed">Confirm</button>`;
-        const curId = +button.parentNode.dataset.id;
-        const butt = button.parentNode.querySelector(
-          ".todo__edit-button_pushed"
-        );
-        button.style = "display:none;";
-        butt.addEventListener("click", (e) => {
-          const input = button.parentNode.querySelector(".edit").value;
-          this.edit(curId, input);
-        });
+        if (e.target.textContent === "Edit") {
+          this.editButton(button);
+          e.target.textContent = "Confirm";
+        } else if (e.target.textContent === "Confirm") {
+          this.confirmButton(button);
+          e.target.textContent = "Edit";
+        }
       });
     });
+  }
+  editButton(button) {
+    const textVal = button.parentNode
+      .querySelector(".todo__text")
+      .textContent.trim();
+    button.parentNode.querySelector(".wrap").innerHTML = `
+        <input class="edit" type="text" value="${textVal}" />`;
+  }
+  confirmButton(button) {
+    const curId = +button.parentNode.dataset.id;
+    const input = button.parentNode.querySelector(".edit").value;
+    this.edit(curId, input);
   }
   initCheckButton() {
     const checkboxes = this.container.querySelectorAll(".label");

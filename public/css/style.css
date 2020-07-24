@@ -138,16 +138,6 @@
 }
 
 .todo__edit-button {
-  margin-left: 20px;
-  height: 32px;
-  background-color: #e7d46b;
-  border: none;
-  border-radius: 3px;
-  padding: 10px;
-}
-
-.todo__edit-button_pushed {
-  margin-left: 122px;
   height: 32px;
   background-color: #e7d46b;
   border: none;
@@ -187,6 +177,7 @@
   }
   .header__input {
     width: 150px;
+    height: 30px;
   }
   .header__button {
     margin-left: 1px;
@@ -196,9 +187,6 @@
   }
   .todo__delete-button {
     margin-left: 10px;
-  }
-  .todo__edit-button_pushed {
-    margin-left: 18px;
   }
   .wrap {
     width: 200px;

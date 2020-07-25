@@ -62,7 +62,11 @@ class Todo {
     if (this.todos.length !== 0) {
       newId = this.todos[this.todos.length - 1].id + 1;
     }
-    this.todos.push({ id: newId, value: value, check: false });
+    this.todos.push({
+      id: newId,
+      value: value.replace(/</g, "&lt;").replace(/>/g, "&gt;"),
+      check: false,
+    });
     this.render();
   }
 
@@ -77,7 +81,7 @@ class Todo {
   edit(id, value) {
     this.todos.forEach((todo) => {
       if (todo.id === id) {
-        todo.value = value;
+        todo.value = value.replace(/</g, "&lt;").replace(/>/g, "&gt;");
       }
     });
     this.render();

@@ -125,6 +125,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  word-break: break-word;
 }
 
 .todo__delete-button {
